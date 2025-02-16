@@ -1,7 +1,7 @@
 
 import createTokenAndSaveCookie from "../jwt/generateToken.js";
 import User from "../models/user.model.js";
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 
 export const signup= async(req,res)=>{
        const {fullname,email,password,confirmPassword}=req.body;
