@@ -17,7 +17,7 @@ function User({user}) {
           <div className='flex space-x-4 px-6 py-3 hover:scale-105 duration-300 cursor-pointer'>
                 <div className={`avatar  `}>
                     <div className={`w-12 rounded-full   text-center pt-2
-                      ring-success ${isOnline?"ring-offset-green-600":"ring-offset-base-100"}  
+                      ring-primary ${isOnline?"ring-success ring-offset-green-600":"ring-offset-base-100"}  
                       ring ring-offset-2 `}>
                       {/* changes in avatar */}
                     

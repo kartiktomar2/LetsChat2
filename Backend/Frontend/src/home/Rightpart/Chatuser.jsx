@@ -26,7 +26,7 @@ function Chatuser() {
             <div>
             <div className={`avatar `}>
                     <div className={`w-12 rounded-full   text-center py-2
-                         ring-success  ${getOnlineUsersStatus(selectedConversation._id)==="online"?"ring-offset-green-600":"ring-offset-base-100"}
+                         ring-primary  ${getOnlineUsersStatus(selectedConversation._id)==="online"?"ring-success ring-offset-green-600":"ring-offset-base-100"}
                           ring ring-offset-2`}>
                       {/* changes in avatar */}
                     

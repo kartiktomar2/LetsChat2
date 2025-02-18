@@ -19,7 +19,7 @@ function Messages() {
         },100)
       },[messages])
   return (
-    <div className='' style={{minHeight:"calc(91vh - 9vh)"}}>
+    <div className='' style={{minHeight:"calc(90vh - 8vh)"}}>
 
 
 {loading ? (
