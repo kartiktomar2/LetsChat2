@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { IoSend } from "react-icons/io5";
 import useConversation from '../../zustand/useConversation.js';
 import useSendMessage from '../../context/useSendMessage.js';
+import toast from "react-hot-toast"
 function Typesend() {
   const [message, setMessage] = useState("");
   const {  loading, sendMessages } = useSendMessage();
@@ -9,7 +10,11 @@ function Typesend() {
   const handleSubmit = async (e) => {
     console.log(e);
     e.preventDefault();
-    await sendMessages(message);
+    if(message.trim()==="")
+      {
+        toast.error("please send valid message")
+      }
+      else {await sendMessages(message);}
     setMessage("");
   };
 
@@ -26,7 +31,7 @@ function Typesend() {
           />
         </div>
         <button>
-          <IoSend className="text-3xl" />
+        <IoSend className="text-3xl cursor-pointer" />
         </button>
       </div>
     </form>
